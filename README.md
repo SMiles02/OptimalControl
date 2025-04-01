@@ -29,6 +29,7 @@ To generate the optimal path, run:
 
 ```sh
 python brachistochrone.py
+```
 
 ## Rocket Launch Fuel Minimisation
 
@@ -58,3 +59,4 @@ To generate the optimal path, run:
 
 ```sh
 python rocket_launch_opt.py
+```
