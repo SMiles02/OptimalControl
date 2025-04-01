@@ -2,7 +2,7 @@
 
 ## Overview
 The **Brachistochrone problem** asks: _What is the fastest path for a particle to travel between two points under gravity?_  
-Surprisingly, the shortest path (a straight line) is not the fastest—the optimal path is a **cycloid**, a curve that minimizes descent time.
+Surprisingly, the shortest path (a straight line) is not the fastest—the optimal path is a **cycloid**, a curve that minimises descent time.
 
 ## Mathematical Formulation
 Using energy conservation, the velocity of the particle at any height `y` is:
