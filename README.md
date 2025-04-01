@@ -60,3 +60,37 @@ To generate the optimal path, run:
 ```sh
 python rocket_launch_opt.py
 ```
+
+# Optimal Resource Allocation
+
+This implementation solves a **resource allocation problem** using **Pontryagin’s Maximum Principle** and numerical optimisation techniques. Given a fixed total amount of resources, we optimise how they should be distributed among **three competing processes**, each with different efficiency functions:  
+
+- **Process 1**: Diminishing returns modelled by a square root function.  
+- **Process 2**: Rapid early gains, then slowing, modelled by a logarithmic function.  
+- **Process 3**: Slower but steady growth, modelled by a cube root function.  
+
+## Methodology 
+The problem is formulated as a constrained optimisation task:  
+
+Maximise: sqrt(x1) + log(1 + x2) + cbrt(x3) Subject to: x1 + x2 + x3 = R
+
+where `R` is the total available resource.  
+
+We use **SciPy’s `minimize` function** with equality constraints to find the optimal allocation. The result is visualised with a **3D surface plot**, showing how different allocations affect total output.  
+
+## Results
+For `R = 100`, a sample output might be:  
+
+Optimal allocation for Process 1: 40.32
+Optimal allocation for Process 2: 20.15
+Optimal allocation for Process 3: 39.53
+
+
+## running the Code 
+Run the script to compute the optimal allocation:  
+
+```sh
+python resource_allocation.py
+```
+
+This will output the best allocation strategy and generate a 3D plot illustrating the solution space.
